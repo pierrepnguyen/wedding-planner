@@ -1,0 +1,13 @@
+@model Wedding
+
+<a href="/index"><b>Home |</b></a>
+<a href="/logout"><b>Logout</b></a>
+<h1>@Model.WedderOne and @Model.WedderTwo's Wedding</h1>
+<h2>Date: @Model.Date</h2>
+@if(@Model.Guests != null)
+{
+  @foreach (var u in @Model.Guests)
+  {
+    <p>@u.User.fName @u.User.lName</p>
+  }
+}
